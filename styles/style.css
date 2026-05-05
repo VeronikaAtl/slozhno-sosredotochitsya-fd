@@ -114,7 +114,6 @@
   color: #000028;
   font-family: var(--font-family, sans-serif);
   font-weight: 700;
-  font-style: Bold;
   font-size: var(--font-size);
   line-height: 23.4px;
   letter-spacing: 0%;
@@ -137,7 +136,6 @@
 .section__title {
   font-family: var(--font-family, sans-serif);
   font-weight: 700;
-  font-style: Bold;
   font-size: var(--font-size);
   line-height: 23.4px;
   letter-spacing: 0%;
