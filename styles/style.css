@@ -8,12 +8,13 @@
 }
 
 .header {
-  height: 100%;
+  height: 100vh;
   min-height: 668px;
   padding: 10px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .header__theme-menu-list {
@@ -27,7 +28,7 @@
 .header__theme-menu-button {
   width: 70px;
   min-height: 26px;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family), Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: var(--font-size);
@@ -51,19 +52,20 @@
 
 .decorated__element {
   position: absolute;
-  display: var(--decorated__element-display);
+  display: var(--decorated-element-display);
   align-items: center;
   gap: 10px;
   justify-self: end;
   color: var(--accent-color);
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family), Arial, sans-serif;
   font-weight: 400;
   font-size: var(--font-size);
   line-height: 25px;
   letter-spacing: 0%;
   text-align: center;
   text-transform: uppercase;
-  margin-right: 10px;
+  margin-right: 19px;
+  margin-top: 10px;
 }
 
 .decorated__element:after {
@@ -78,22 +80,21 @@
 
 .decorative-corner::before {
   position: absolute;
-  top: 0;
-  right: 0;
-  border-top: 1px solid var(--decorated__element-color);
-  border-right: 1px solid var(--decorated__element-color);
+  top: 10px;
+  right: 10px;
+  border-top: 1px solid var(--decorated-element-color);
+  border-right: 1px solid var(--decorated-element-color);
   inline-size: 25px;
   block-size: 25px;
   content: "";
-  margin: 10px;
 }
 
 .decorative-corner::after {
   position: absolute;
-  top: 633px;
+  bottom: 10px;
   left: 10px;
-  border-bottom: 1px solid var(--decorated__element-color);
-  border-left: 1px solid var(--decorated__element-color);
+  border-bottom: 1px solid var(--decorated-element-color);
+  border-left: 1px solid var(--decorated-element-color);
   inline-size: 25px;
   block-size: 25px;
   content: "";
@@ -101,7 +102,7 @@
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family), Arial, sans-serif;
   font-weight: 700;
   line-height: 83%;
   letter-spacing: 0%;
@@ -112,7 +113,7 @@
 .title-decor {
   background-color: var(--accent-color);
   color: #000028;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family), Arial, sans-serif;
   font-weight: 700;
   font-size: var(--font-size);
   line-height: 23.4px;
@@ -120,7 +121,7 @@
 }
 
 .header__text {
-  max-height: 117px;
+  gap: 0;
   width: 100%;
   margin-top: 55px;
 }
@@ -134,12 +135,12 @@
 }
 
 .section__title {
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family), Arial, sans-serif;
   font-weight: 700;
   font-size: var(--font-size);
   line-height: 23.4px;
   letter-spacing: 0%;
-  color: var(--section__title-color);
+  color: var(--section-title-color);
 }
 
 .section__answer {
@@ -153,7 +154,7 @@
 }
 
 .text-decor {
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family), Arial, sans-serif;
   font-weight: 400;
   font-size: var(--font-size);
   line-height: 23.4px;
@@ -161,12 +162,12 @@
   color: var(--text-color);
 }
 
-.section__three_answer__title {
+.section__advice_answer__title {
   font-weight: 400;
 }
 
 .question__section-answer-link {
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family), Arial, sans-serif;
   font-weight: 400;
   font-size: var(--font-size);
   line-height: 100%;
@@ -208,7 +209,7 @@
 }
 
 .footer {
-  height: 100%;
+  /*height: 100%;*/
   min-height: 668px;
   display: flex;
   justify-content: center;
@@ -220,7 +221,7 @@
 
 .footer__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family), Arial, sans-serif;
   font-weight: 700;
   line-height: 83%;
   letter-spacing: 0%;
@@ -233,15 +234,16 @@
   outline: 1px solid var(--btn-color);
 }
 
-@media (width >= 768px) and (width < 1024px) {
+@media (width >= 768px) {
   .header {
     min-height: 1024px;
-    padding: 20px 20px 183px 0;
     margin-bottom: 60px;
+    padding: 0px;
   }
 
   .header__theme-menu-list {
-    margin-top: 172px;
+    margin-top: 192px;
+    margin-right: 20px;
   }
 
   .header__title {
@@ -249,27 +251,32 @@
     display: flex;
     align-items: end;
     justify-self: start;
-    min-height: 264px;
   }
 
   .header__text {
-    display: flex;
     justify-self: end;
     max-width: 364px;
     margin-top: 162px;
+    margin-right: 20px;
+  }
+
+  .decorated__element {
+    margin-top: 20px;
+    margin-right: 29px;
   }
 
   .decorative-corner::before {
-    margin: 20px;
+    top: 20px;
+    right: 20px;
   }
 
   .decorative-corner::after {
-    top: 979px;
+    bottom: 20px;
     left: 20px;
   }
 
-  .section__one,
-  .section__three {
+  .section__concentration,
+  .section__advice {
     grid-auto-flow: column;
     gap: 20px;
     grid-template-columns: 1fr 2fr;
@@ -282,11 +289,11 @@
     padding-left: 20px;
   }
 
-  .section__three {
+  .section__advice {
     margin-bottom: 79px;
   } /**/
 
-  .section__two__title {
+  .section__reduced_concentration__title {
     max-width: 236px;
   }
 
@@ -339,7 +346,7 @@
 @media (width >= 1024px) {
   .header {
     min-height: 768px;
-    padding: 20px 20px 135px 20px;
+    padding: 0px;
     margin-bottom: 60px;
   }
 
@@ -347,7 +354,8 @@
     display: flex;
     justify-self: center;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 20px;
+    margin-right: 0px;
   }
 
   .header__title {
@@ -355,24 +363,21 @@
     display: flex;
     align-items: end;
     justify-self: start;
-    min-height: 245px;
-    margin-left: -20px;
   }
 
   .header__text {
-    display: flex;
     justify-self: end;
-    align-self: end;
+    align-self: center;
     max-width: 491px;
-    max-height: 71px;
+    margin: 0px 20px 21px 0px;
   }
 
   .decorative-corner::after {
     top: 723px;
   }
 
-  .section__one,
-  .section__three {
+  .section__concentration,
+  .section__advice {
     grid-auto-flow: column;
     gap: 19.93px;
     grid-template-columns: 1fr 2.06fr;
@@ -388,12 +393,11 @@
   .section__grid {
     align-self: start;
   }
-  .section__two_answer {
-    grid-auto-flow: column;
+  .section__reduced_concentration_answer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .section__two__title {
+  .section__reduced_concentration__title {
     max-width: 315px;
   }
 
@@ -440,13 +444,5 @@
 
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .decorative-corner::before {
-    margin: 20px;
-  }
-
-  .decorative-corner::after {
-    left: 20px;
   }
 }
