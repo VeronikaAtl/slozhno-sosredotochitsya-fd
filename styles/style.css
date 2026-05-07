@@ -61,7 +61,7 @@
   font-weight: 400;
   font-size: var(--font-size);
   line-height: 25px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
   margin-right: 19px;
@@ -105,19 +105,20 @@
   font-family: var(--font-family), Arial, sans-serif;
   font-weight: 700;
   line-height: 83%;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   color: var(--header-title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .title-decor {
   background-color: var(--accent-color);
-  color: #000028;
+  /*color: #000028;*/
+  color: var(--title-decor-color);
   font-family: var(--font-family), Arial, sans-serif;
   font-weight: 700;
   font-size: var(--font-size);
   line-height: 23.4px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
 }
 
 .header__text {
@@ -139,7 +140,7 @@
   font-weight: 700;
   font-size: var(--font-size);
   line-height: 23.4px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   color: var(--section-title-color);
 }
 
@@ -158,7 +159,7 @@
   font-weight: 400;
   font-size: var(--font-size);
   line-height: 23.4px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   color: var(--text-color);
 }
 
@@ -171,7 +172,7 @@
   font-weight: 400;
   font-size: var(--font-size);
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   color: var(--text-color);
   text-shadow: 2px 1px 0 var(--accent-color);
   text-decoration: none;
@@ -209,7 +210,7 @@
 }
 
 .footer {
-  /*height: 100%;*/
+  height: 100vh;
   min-height: 668px;
   display: flex;
   justify-content: center;
@@ -224,7 +225,7 @@
   font-family: var(--font-family), Arial, sans-serif;
   font-weight: 700;
   line-height: 83%;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   color: var(--header-title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
@@ -370,10 +371,6 @@
     align-self: center;
     max-width: 491px;
     margin: 0px 20px 21px 0px;
-  }
-
-  .decorative-corner::after {
-    top: 723px;
   }
 
   .section__concentration,
